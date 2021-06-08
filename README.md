@@ -44,7 +44,7 @@ Results:
 ![fps-test](./img/fps-test.png)
 
 ### Deploy
-https://ruslan547.github.io/frontend-nanodegree-mobile-portfolio/views/pizza.html
+https://ruslan547.github.io/frontend-nanodegree-mobile-portfolio/
 
 ### Optimization Tips and Tricks
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
