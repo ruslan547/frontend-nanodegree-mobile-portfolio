@@ -43,6 +43,9 @@ You might find the FPS Counter/HUD Display useful in Chrome developer tools desc
 Results:
 ![fps-test](./img/fps-test.png)
 
+### Deploy
+https://ruslan547.github.io/frontend-nanodegree-mobile-portfolio/views/pizza.html
+
 ### Optimization Tips and Tricks
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
 * [Analyzing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html "analyzing crp")
