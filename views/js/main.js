@@ -502,12 +502,14 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
   var items = document.querySelectorAll('.mover');
+  // pull out scrollTop from for cycle
+  // document.body.scrollTop is no longer supported in Chrome.
+  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
   for (var i = 0; i < items.length; i++) {
-    // document.body.scrollTop is no longer supported in Chrome.
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     var phase = Math.sin((scrollTop / 1250) + (i % 5));
-    //items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
-    items[i].style.transform = `translateX(${items[i].basicLeft + 100 * phase}px)`;
+    // change left writing to translate3d
+    items[i].style.transform = `translate3d(${items[i].basicLeft + 100 * phase}px, 0px, 0px)`;
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
@@ -537,5 +539,6 @@ document.addEventListener('DOMContentLoaded', function () {
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
     document.querySelector("#movingPizzas1").appendChild(elem);
   }
+
   updatePositions();
 });
